@@ -17,4 +17,6 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+// same logic as sql
+use("chrome-burger-db");
+db.menu_items.find({ category: "Side" });
