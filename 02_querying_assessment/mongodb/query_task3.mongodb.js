@@ -17,4 +17,8 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+// The need a list of ingredient that have stock level equal 100 or more
+use("chrome-burger-db");
+db.ingredients.find({
+  stock_level: { $gte: 100 },
+});
