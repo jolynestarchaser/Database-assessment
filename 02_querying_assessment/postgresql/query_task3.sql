@@ -19,4 +19,15 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+-- this task is getting complex to me so I read a hint 
+-- first step I will query all to see what information I have
+-- I think this task need to use Join because staff_id in orders doesn't have a name of staff 
+-- I need to specific query on cashiers, and their order count and order by desc
+
+select staff.first_name , staff.last_name , COUNT(orders.order_id) as Total_order
+from staff
+Inner JOIN orders on staff.staff_id=orders.staff_id
+where role ='Cashier'
+
+GROUP BY staff.first_name , staff.last_name 
+ORDER BY Total_order DESC;
