@@ -17,4 +17,11 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+-- I read a hint and they need to find name of all ingredients by 'Freshest Farm Produce'
+-- I will query to see list of ingredients first then I will sort them specific
+-- And found that it's not work so I decide to look at supplier that show 'Freshest Farm Produce'
+-- Then I see supplier_ID 3 that's stand for Freshest Farm Produce so I deciding to show name and stock level
+-- For make manager can be manage supplier easily
+
+select name, stock_level from ingredients
+where supplier_id = '3'
