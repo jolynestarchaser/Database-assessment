@@ -17,4 +17,8 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+-- They need the full names of every staff member = I need to query Full name of every staff
+-- whose role is 'Cook' = that is have a Cook in their role
+
+select first_name, last_name, role from staff
+where role = 'Cook'
