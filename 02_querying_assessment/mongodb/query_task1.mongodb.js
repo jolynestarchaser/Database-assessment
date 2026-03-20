@@ -17,4 +17,9 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+// I need to show item that priced under $10.00
+
+use("chrome-burger-db");
+db.menu_items.find({
+  price: { $lt: 10.0 },
+});
