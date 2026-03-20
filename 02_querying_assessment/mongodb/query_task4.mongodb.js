@@ -18,4 +18,21 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+// I read a hint to use aggregation to query
+// I think I need to combined together by using $Group
+
+use("chrome-burger-db");
+db.orders.aggregate([
+  {
+    $group: {
+      _id: null,
+      total_revenue: { $sum: "$total_price" },
+    },
+  },
+  {
+    $project: {
+      total_revenue: 1,
+      _id: 0,
+    },
+  },
+]);
