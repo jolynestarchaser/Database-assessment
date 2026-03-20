@@ -20,8 +20,7 @@
 // Your thinking:
 // I need to query to show orders by Jane Doe
 // and I need to show only order date and price
-// So I pull objectID of Jane Doe
-// Count ?
+
 use("chrome-burger-db");
 db.orders.find(
   { "staff.first_name": "Jane" },
