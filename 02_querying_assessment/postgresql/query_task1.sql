@@ -18,7 +18,7 @@
 --
 -- Your thinking:
 -- They need a list of every item = I need to query all list item
--- in the 'Side' category  = where category
+-- in the 'Side' category  = where category .
 -- along with its current price = and I need to query to show item price too
 
 
