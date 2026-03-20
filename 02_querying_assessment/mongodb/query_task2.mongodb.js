@@ -18,4 +18,16 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+// I need to query to show orders by Jane Doe
+// and I need to show only order date and price
+// So I pull objectID of Jane Doe
+// Count ?
+use("chrome-burger-db");
+db.orders.find(
+  { "staff.first_name": "Jane" },
+  { order_date: 1, total_price: 1, _id: 0 },
+);
+
+//_id: ObjectId("634d00000000000000000011")
+//  first_name: 'Jane',
+//    last_name: 'Doe'
